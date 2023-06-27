@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3D Fractals</title>
+        <style>
+            html,
+            body {
+                overflow: hidden;
+                background-color: gray;
+                padding: 0;
+                margin: 0;
+                font-family: monospace;
+            }
+
+            #menu {
+                position: fixed;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #menu > input,
+            #menu > select {
+                margin-bottom: 10px;
+            }
+
+            label {
+                color: white;
+                padding: 3px 0px;
+            }
+
+            .small {
+                font-size: 10px;
+            }
+        </style>
+      <script type="module" crossorigin src="/assets/index-263cde80.js"></script>
+    </head>
+    <body oncontextmenu="return false;">
+        <div id="menu">
+            <label for="selectType">Fractal Type</label>
+            <select name="selectType" id="selectType">
+                <option value="Sierpinski-Triangle">Sierpinski Triangle</option>
+                <option value="Sierpinski-Carpet">Sierpinski Carpet</option>
+                <option value="Koch-Cubes">Koch Snowflakes (Cubes)</option>
+                <option value="Fractal-Cubes">Rhombus Cubes</option>
+                <option value="Alternate-Koch-Cubes" selected>Alternate Koch Cubes</option>
+            </select>
+
+            <label for="steps"
+                >Steps
+                <p class="small">(>3 could cause immense lag when loading mesh)</p></label
+            >
+            <input type="number" name="steps" id="stepsChanger" min="1" max="8" value="3" />
+
+            <div>
+                <label for="transparent">Transparency</label>
+                <input type="checkbox" name="transparent" id="transparencyChanger" />
+            </div>
+        </div>
+
+        
+    </body>
+</html>
